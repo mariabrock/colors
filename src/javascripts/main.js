@@ -1,12 +1,14 @@
-import 'bootstrap';
-import '../styles/main.scss';
-import cardList from './components/cardList/cardList';
 // import arrayMethods from './arrayMethods';
+import cardList from './components/cardList/cardList';
+import c from './helpers/data/colors';
+
+import '../styles/main.scss';
 
 const init = () => {
   // arrayMethods.init();
-  // cardList.cardListEvents();
-  cardList.cardListBuilder();
+  const colors = c.getColors();
+  cardList.cardListEvents();
+  cardList.cardListBuilder(colors);
 };
 
 init();
